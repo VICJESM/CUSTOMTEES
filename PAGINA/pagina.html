@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playeras Personalizadas</title>
+</head>
+<body>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            background: linear-gradient(to right, #4CAF50, #81C784);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .banner p {
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .puzzle {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+        .puzzle img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .puzzle img:hover {
+            transform: scale(1.05);
+        }
+        .descripcion {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #333;
+            background: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .descripcion img {
+            width: 80%;
+            margin-top: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>Custom Tees</h1>
+    <p>Descubre nuestros servicios haciendo clic en las imágenes</p>
+</div>
+
+<div class="puzzle">
+    <img src="cat.png" alt="Catálogo" onclick="mostrarDescripcion('catalogo')">
+    <img src="personaliza.jpg" alt="Personalización" onclick="mostrarDescripcion('personalizacion')">
+    <img src="envio.jpg" alt="Envíos" onclick="mostrarDescripcion('envios')">
+    <img src="diseño.png" alt="Diseño Creativo" onclick="mostrarDescripcion('diseno')">
+    <img src="Estampado.png" alt="Calidad" onclick="mostrarDescripcion('calidad')">
+    <img src="promo.png" alt="Ofertas" onclick="mostrarDescripcion('ofertas')">
+</div>
+
+<div id="servicioDescripcion" class="descripcion">
+    Haz clic en una imagen para ver los detalles del servicio.
+</div>
+
+<script>
+function mostrarDescripcion(servicio) {
+    var descripcion = {
+        catalogo: {
+            texto: "Explora nuestro catálogo de playeras personalizadas en diferentes estilos, colores y tallas.",
+            imagen: "cta.png"
+        },
+        personalizacion: {
+            texto: "Personaliza tu prenda con tu propio diseño, frases únicas o imágenes especiales.",
+            imagen: "per.png"
+        },
+        envios: {
+            texto: "Realizamos envíos rápidos y seguros a todo el país, con seguimiento en línea.",
+            imagen: "envioenlinea.jpg"
+        },
+        diseno: {
+            texto: "Ofrecemos asesoría de diseño gráfico para crear playeras únicas y exclusivas.",
+            imagen: "diseño.jpg"
+        },
+        calidad: {
+            texto: "Utilizamos materiales de alta calidad: telas premium y estampados duraderos.",
+            imagen: "impresion.jpg"
+        },
+        ofertas: {
+            texto: "Consulta nuestras promociones y descuentos especiales por temporada o volumen.",
+            imagen: "promocion.jpg"
+        }
+    };
+
+    document.getElementById('servicioDescripcion').innerHTML = `
+        <p>${descripcion[servicio].texto}</p>
+        <img src="${descripcion[servicio].imagen}" alt="Imagen servicio">
+    `;
+}
+</script>
+	<div style="border:2px solid rgb(204, 102, 204>;
+    <header>
+        <h1>CUSTOM TEES</h1>
+        <p>Tu estilo, tu dise�o</p>
+    </header>
+
+        <a href="#">Inicio</a> | 
+        <a href="#">Productos</a> | 
+        <a href="#">Contacto</a> | 
+        <a href="#">Sobre Nosotros</a>
+
+    
+
+    <hr size=8 width=80% align="center" color="red">
+
+    
+        <h2>Nuestros Productos</h2>
+        <p>Explora nuestra coleccion de playeras personalizadas con diseños exclusivos.</p>
+        
+        <div>
+            <marquee behavior="alternate" hspace="100">
+                <h3>Playera Estilo Clasico</h3>
+                <img src="../IMG/custom1.png" alt="Playera Clasica" width="200">
+                <p>Disponible en varios colores y tallas.</p>
+            </marquee>
+        </div>
+
+        <div>
+            <h3>Playera Edicion Especial</h3>
+            <marquee behavior="alternate" hspace="100">
+                <img src="../IMG/custom2.jpg" alt="Playera Edicion Especial" width="200">
+                <p>Diseño premium con impresion de alta calidad.</p>
+                <p>Dise&ntilde;o premium con impresion de alta calidad.</p>
+                <!--<p>Dise&ntilde;o premium con impresion de alta calidad.</p> -->
+            </marquee>
+        </div>
+    
+
+      <hr size=8 width=80% align="center" color="red">
+
+    
+        <h2>
+        
+        ¿Por que elegirnos?</h2>
+        <h3>Caracteristicas principales:</h3>
+        <ul>
+            <li>Materiales de alta calidad</li>
+            <li>Diseños exclusivos</li>
+            <li>Opciones de personalizacion</li>
+            <li>Envio a todo el pais</li>
+        </ul>
+
+        <h3>Pasos para comprar:</h3>
+        <ol>
+            <li>Selecciona tu diseño favorito.</li>
+            <li>Elige la talla y color.</li>
+            <li>Personaliza si lo deseas.</li>
+            <li>Realiza tu pedido y recibe en casa.</li>
+        </ol>
+    
+
+      <hr size=8 width=80% align="center" color="red">
+
+    
+        <h2>Contacto</h2>
+        <h3>!Hablemos!</h3>
+        <p>Correo: figueroa.sanchez.victor.jesus97@gmail.com</p>
+        <p>Telefono: +52 722 111 1064</p>
+    
+
+   
+        <h1>&copy; 2025 Playeras Personalizadas. Todos los derechos reservados.</h1>
+   
+	</div>
+</body>
+</html>
