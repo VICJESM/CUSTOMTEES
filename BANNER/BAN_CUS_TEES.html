@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Tees - Servicios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            background: linear-gradient(to right, #4CAF50, #81C784);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .banner p {
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .puzzle {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+        .puzzle img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .puzzle img:hover {
+            transform: scale(1.05);
+        }
+        .descripcion {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #333;
+            background: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .descripcion img {
+            width: 80%;
+            margin-top: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>Custom Tees</h1>
+    <p>Descubre nuestros servicios haciendo clic en las imágenes</p>
+</div>
+
+<div class="puzzle">
+    <img src="cat.png" alt="Catálogo" onclick="mostrarDescripcion('catalogo')">
+    <img src="personaliza.jpg" alt="Personalización" onclick="mostrarDescripcion('personalizacion')">
+    <img src="envio.jpg" alt="Envíos" onclick="mostrarDescripcion('envios')">
+    <img src="diseño.png" alt="Diseño Creativo" onclick="mostrarDescripcion('diseno')">
+    <img src="Estampado.png" alt="Calidad" onclick="mostrarDescripcion('calidad')">
+    <img src="promo.png" alt="Ofertas" onclick="mostrarDescripcion('ofertas')">
+</div>
+
+<div id="servicioDescripcion" class="descripcion">
+    Haz clic en una imagen para ver los detalles del servicio.
+</div>
+
+<script>
+function mostrarDescripcion(servicio) {
+    var descripcion = {
+        catalogo: {
+            texto: "Explora nuestro catálogo de playeras personalizadas en diferentes estilos, colores y tallas.",
+            imagen: "cta.png"
+        },
+        personalizacion: {
+            texto: "Personaliza tu prenda con tu propio diseño, frases únicas o imágenes especiales.",
+            imagen: "per.png"
+        },
+        envios: {
+            texto: "Realizamos envíos rápidos y seguros a todo el país, con seguimiento en línea.",
+            imagen: "envioenlinea.jpg"
+        },
+        diseno: {
+            texto: "Ofrecemos asesoría de diseño gráfico para crear playeras únicas y exclusivas.",
+            imagen: "diseño.jpg"
+        },
+        calidad: {
+            texto: "Utilizamos materiales de alta calidad: telas premium y estampados duraderos.",
+            imagen: "impresion.jpg"
+        },
+        ofertas: {
+            texto: "Consulta nuestras promociones y descuentos especiales por temporada o volumen.",
+            imagen: "promocion.jpg"
+        }
+    };
+
+    document.getElementById('servicioDescripcion').innerHTML = `
+        <p>${descripcion[servicio].texto}</p>
+        <img src="${descripcion[servicio].imagen}" alt="Imagen servicio">
+    `;
+}
+</script>
+
+</body>
+</html>
